@@ -1,6 +1,9 @@
 pipeline{
     /* A declarative pipeline */
     agent any
+    tools{
+        maven 'LocalMaven'
+    }
         parameters{
             string(name: 'tomcat_dev', defaultValue: '54.234.43.113', description: 'Dev Tomcat installation')
             string(name: 'tomcat_prod', defaultValue: '35.171.4.25', description: 'Prod Tomcat installation')
